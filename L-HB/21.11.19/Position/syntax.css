@@ -1,0 +1,16 @@
+/* .One {
+    display: static;
+    background: yellowgreen;
+} */
+
+.Two {
+    /* fixed ile sabitlenen elementler scroll yapılsa bile ekranda kalır sabit menüzler tarzında */
+    position: fixed;
+    /* absolute ise sayfaya göre sabitler dolayısıyla kaybolur scrollda */
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 0, 0, 0.548);
+}

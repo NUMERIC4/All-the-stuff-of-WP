@@ -1,0 +1,12 @@
+.classOne {
+    width: 500px;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.classTwo {
+    /* max width in oluu ile sayfaya sığacağı için textte veya ne gösteriyorsak kayıp yaşamıyoru */
+    max-width: 500px;
+    margin: auto;
+    border: 2px solid darkred;
+}

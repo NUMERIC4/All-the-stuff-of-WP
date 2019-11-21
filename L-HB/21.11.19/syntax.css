@@ -1,0 +1,34 @@
+/* div p {
+    background: yellow;
+}
+
+.classOne {
+    background-color: yellowgreen;
+} */
+
+/* yazılırsa bu iki klastan birine sahip elemanlar için olan değişiklikleri belirtecek */
+/* .classOne .classTwo  */
+
+/* yazılırsa iki classıda taşıyan elementleri etkileyecek özellikler yazılır */
+/* .classOne.classTwo */
+
+/* yukarda span ekledik p nin içine bu bi texte bir parçanın farklı özelliklerine sahip olmasını istediğimizde yapıyoruz atanacak özelliklerde aşağıdaki gibi atanır */
+/* p span {
+    background-color: rebeccapurple;
+}
+
+div p.classFour {
+    background-color: black;
+    color: white;
+} */
+
+/* divden sonraki ilk p tagını almak iin aşağıdaki işlem */
+/* div +p {
+    background-color: purple;
+} */
+
+/* div içindeki p taglerini işaretler */
+/* div>p {
+    background-color: rebeccapurple;
+} */
+

@@ -1,0 +1,33 @@
+/* span {
+    display: block;
+} */
+/* ne işe yarıyor fikrim yok */
+
+ul {
+    width: 100%;
+    background-color: seagreen;
+}
+
+/* hepsini yan yana almasını sağlıyor */
+ul li {
+    display: inline;
+    /* daha net gözükmesi için boşluk ekledik */
+    padding: 10px;
+    margin: 10px;
+    /* üzerine geldiğinde ok işareti parmağa dönüşüyor sadece link miş gibi davranıyor */
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.class1 {
+    width: 250px;
+    height: 200px;
+    /* display: block; */
+    /* alttaki ürünün gösterilmemesi hata direk varlığı yok gibi davranıyor için bir kod
+    display: none; */
+    /* alttaki ürünün gösterilmesini engelliyor ama kaplayacağı alan yinede belli oluyor
+    visibility: hidden; */
+    background-color: violet;
+}
+

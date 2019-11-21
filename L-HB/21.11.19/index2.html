@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="syntax2.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- p tagının kendi içine line break olayı var o yüzden yan yana yazsakta alt alta basar -->
+    <p>Lorem ipsum dolor sit amet.</p><p>Lorem ipsum dolor sit amet.</p>
+    <!-- aynı durum spande olmadığı için yan yana basar -->
+    <span>Lorem ipsum dolor sit amet.</span><span>Lorem ipsum dolor sit amet.</span>
+
+    <!-- span kendini p içinde bulundurduğu için satır aşağı geçmedi -->
+    <p>Lorem ipsum dolor sit amet. <span>Lorem ipsum dolor sit amet.</span></p>
+
+    <!-- alt alta bastı çünkü spanin içinde olan p kendine özgü satır açtı ve aşağı geçti -->
+    <span>Lorem ipsum dolor sit amet. <p>Lorem ipsum dolor sit amet.</p></span>
+
+    <span>Lorem ipsum dolor sit amet.</span><span>Lorem ipsum dolor sit amet.</span>
+
+<div class="class1">Helsinki</div>
+
+<ul>
+    <li>Jacky</li>
+    <li>Daniel</li>
+    <li>Absolute</li>
+    <li>Jäger</li>
+
+</ul>
+
+</body>
+</html>
