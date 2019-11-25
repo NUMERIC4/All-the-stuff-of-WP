@@ -1,0 +1,81 @@
+.container {
+/* elementlerin mümkün olduğu kadarını yanyana basmaya yarıyor */
+display: flex;
+
+/* default değer elementler aynı satırda tutar itemların içeriğini küçültebildiği kadar küçültür diğer türlü scrollu açar */
+/* flex-wrap: nowrap;  */
+
+/* burada olan mevzu satıra sığmayan daralmayacak elementleri alt satıra iteliyor */
+/* flex-wrap: wrap; */
+/* wrap: item genişliklerini mümkünse bozmaz alt satıra iner ama eğer tek elementin genişliğinden daha aza çekersek browser genişliğini mümkün oldukça daraltır genişliğini elementin. Ama hala daraltmaya devam edersek scroll olayını açar */
+
+/* Satıra sığmayan elementleri alt satıra değil üst satıra atıyor*/
+/* flex-wrap: wrap-reverse; */
+
+/* sağdan sola doğru satırı işler elementler yerleştirir */
+/* flex-direction: row-reverse; */
+
+/* elementleri dikeye yerleştirir */
+/* flex-direction: column; */
+
+/* bundada sütuna tersten yerleştirerek devam edecek */
+/* flex-direction: column-reverse; */
+
+/* bu komut direction ve wrap i birleştiren bir aparat diyelim virgül öncesi direction virgül sonrası wrap için tanımlanıyor */
+/* flex-flow: column-reverse wrap; */
+/* aktif edemedim bir uğraşmam gerek burada */
+
+/* sanki burada itemlerin max bir limiti var gibi davrandı hr ı itemlerin içinden geçicek şekilde bastı bi bak belki problem burada */
+
+height: 900px;
+
+/* aktif edememe sebebim bu alttaki cacığın olmamasıymış :D */
+flex-wrap: wrap;
+
+background: red;
+
+
+/* direk ortaya alıyor */
+/* justify-content: center; */
+
+/* container'ın başlangıcından sonuna kadar olana yerde dağıtım yapar */
+justify-content: space-between;
+
+
+flex-direction: row;
+
+/* container'ın dibine paslar */
+/* align-items: flex-end; */
+
+/* align-items: center; */
+
+
+/* bunun çalışması için tanımlı bir yükseklik olmamalı ki browser stretch çekme yapabilsin */
+align-content: stretch;
+}
+
+#denenen {
+    height: 200px;
+    line-height: 200px;
+}
+
+.item {
+    /* sol üstte kalan texti nasıl ortaya alırız */
+    
+    text-align: center;
+    /* Bu yatayda ortaladı */
+
+    /* eğer line-height: içine negatif bir değer yazarsak bunu kabul etmiyor sistem kafasına göre bir sayı veriyor. */
+    line-height: 150px;
+    /* bu da dikey için ortaladı ama manuel yaptık mevzuyu sanırım çünkü px var içerde */
+    
+    /* bunu devredışı bırakırsak ancak stretch aktif olucak */
+    /* height:150px; */ 
+    width: 150px;
+    background: green;
+    
+    /* resim koyunca yazıların hizası yamuldu bu yüzden margin yerleştirdik */
+    margin: 20px;
+    
+    font-size: 120px;
+}
