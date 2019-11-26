@@ -1,0 +1,26 @@
+/* iki tage özellik vermek için aray virgül lazım */
+header, footer, section{
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    background: url("joshua-reddekopp-qLFJKFBppPM-unsplash.jpg");
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    /* resim koysaydım kısma durumunda merkez en sona kalıcak şekilde kemse işlemi yapıcaktı. Ben renk kullandığım için iu an bu işlevi göremiyorz */
+    background-position: center;
+}
+
+main {
+    background: red;
+}
+footer {
+    background: chartreuse;
+}
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+}
