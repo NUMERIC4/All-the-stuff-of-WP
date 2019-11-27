@@ -1,0 +1,162 @@
+/* önce css dosyasını yazıcaz, ardından media query lerini yazıcaz */
+/* "*" her şeyi kapsıyor demek */
+* {
+/* istemediğimiz nokta her browserın kendi değerleri var padding ve margin için onları elimine etmek için 0lıyoruz direk ve border box istiyoruz. Border box paading ve margin dahil bütün değerlerin genişliğini belirleyen şey oluyor. Dolayısıyla önceden contente size verirken border box ile tamamını kapsıyor */
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /* direk başta belirliyoruz ki ayrı ayrı belirlemek zorunda kalmayalım */
+    font-family: Helvetica;
+}
+
+/* navbara başlama zamanı */
+.navbar {
+    overflow: hidden;
+    background: #333;
+    
+    /* bu kısım navbarın başlangıcı için gerekne boşluk */
+    margin-top: 50px;
+    position: sticky;
+    top: 0;
+}
+
+/* navbarın içinde a taglerine ulaşmak istediğimiz için bu şekilde yazıyoruz */
+.navbar a {
+    /* sola yaslamak için */
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+
+    /* biraz daha buton olarak gözüksün diye bu şekilde yazdık */
+    padding: 15px 20px;
+
+    /* link alt çizgisi gitti */
+    text-decoration: none;
+
+    /* harfleri büyüttük */
+    text-transform: uppercase;
+}
+
+/* linklerin üzerine gelince efekt oluşmasını istiyouz */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+/*.text {
+    width: 300px;
+    height: 1200px; 
+
+    /* Şuan içi boş buna rağmen gözükmesi için bunu yazdık */
+/*    display: block;
+
+    background: lightblue;
+    margin-bottom: 300px;
+}
+*/
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* en dış çerçeveye bunu veriyoruz */
+.row {
+    width: 100%;
+}
+
+/* outer boxun bulunma sebebide bunlara 25% dediğimizde 4. sü aşağı geçmicek onlara padding ve margin eklememize rağmen çünkü oraya verdiklerimizle beraber bu rafa sığdırıcak browser ve biz eminizki bu 4 raf yan yana sayfaya sığacak */
+/* row içindeki outerbox diye tanımladık karışık komplex yapılarda iş yapar */
+/* buraya verdiğimiz 25% textin gözükeceği çeyreği temsil etti belirledi her ne kadar çerçevemiz sayfanın tamamı olsada iç kısmındaki rafımız sadece çeyreğini kapsıyor */
+.row .outer-box {
+    width: 25%;
+    float: left;
+}
+
+
+.column {
+    padding: 20px;
+    margin: 20px;
+    height: 300px;
+}
+
+/* :after demek bu class tan sonra uygulanacak kod kümesi */
+.row::after {
+    /* eğer bu iki satırı yazmaksak clear komutu tek başına bir şey ifade etmiyor */
+    content: '';
+    display: block;
+
+    /* float ne ise clear yanına o yazılsa iyi ama en garantisi both yazılması */
+    clear: both;
+}
+
+/* float olayını nerede açıyorsun devamında kapatmak için şu after olayını kullanmak lazımki sayfanın gerisi karışmasın */
+/* divden sonraki p ye gir */
+div + p {
+    background: grey;
+    font-size: 25px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* bu resim kısmıda olmadı acaba neden ? */
+.image {
+    width: 100%;
+}
+.image-box {
+    margin: 20px;
+}
+.image .image-box img{
+    width: 50%;
+}
+
+/* bunu çalıştıramadım uğraşmam gerek */
+@media screen and (min-width: 601px) and (max-width:992px) {
+    .outer-box{
+        width: 50%;
+    }
+    .example {
+        display: block;
+    }
+    .image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .navbar a
+    {
+        width: 100%;
+        float: none;
+    }
+    .outer-box {
+        width: 100%;
+    }
+    .column {
+        height: 100px;
+    }
+    .example {
+        display: none;
+    }
+    div + p {
+        font-size: 15px;
+    }
+}
+
+.example {
+    background: yellow;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* display none ve block ile belli pixel lerde görünür yapıp gizleyebiliiz */
+

@@ -1,0 +1,18 @@
+body{background-color: rgb(244, 179, 94); color: black;}
+@media screen and (max-width: 992px) 
+    {
+    body {
+        /* bunu bu şekilde ekleyince ekran size ına göre ekran renkleri değişmekte */
+        background-color: rgb(119, 119, 119);
+        }
+    
+    }
+/* temel espri limiti nereden koyduğun max mı min mi orası önemli */
+@media screen and (max-width: 600px) 
+    {
+    body {
+        /* bunu bu şekilde ekleyince ekran size ına göre ekran renkleri değişmekte */
+        background-color: rgb(244, 244, 244);
+        }
+    
+    }
