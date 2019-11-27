@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formating</title>
+    <style>
+    p.craz {background: turquoise;}
+    .craz {color: red;}
+    </style>
 </head>
 <body>
     <pre style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -52,6 +56,21 @@
     <bdo  dir="rtl">This text will be written from right to left</bdo>
 ||
     <bdo>This text will be written from right to left</bdo>
+
+    <h1 style="border:2px solid Tomato;">Hello World</h1>
+    <h1 style="border:2px Tomato solid;">Hello World</h1>
+    <h1 style="border:solid Tomato 2px;">Hello World</h1>
+
+    <h1 style="background-color:rgba(255, 255, 255, 0.5);">...</h1>
+    <h1 style="background-color:rgba(127, 127, 127, 1);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+<p class="craz">oo ma bo</p>
+<h1 class="craz">oo ma bo</h1>
+<!-- style içindeki iki atama element ismi ile class isminin birlikte kullanılmasıyla etkilenecek element sayısının indirgenmesi mümkün mü kontrolü için yapılmış olup, mümkün olduğu gözlendi -->
+
+
 
 </body>
 </html>
