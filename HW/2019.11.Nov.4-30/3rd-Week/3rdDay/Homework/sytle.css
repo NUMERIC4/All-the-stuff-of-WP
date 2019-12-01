@@ -1,0 +1,51 @@
+/* Reset the default settings */
+html body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Layout of Navbar */
+.Navbar-Out {
+    background: black;
+    overflow: hidden;
+    margin: 30px;
+    position: sticky;
+}
+
+/* Navbar Default settings */
+a {
+    text-decoration: none;
+    color: blanchedalmond;
+    
+    /* Button settings */
+    padding: 10px 15px 10px 15px;
+    display: block;
+    float:left ;
+    border-radius: 25px;
+}
+
+/* Aktivated link effect */
+a:hover {
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+/* Layout of image */
+.TheFrame {
+    margin: 30px;
+}
+div>img {
+    width: 100%;
+}
+
+/* First slide text */
+.OpeningText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+}
