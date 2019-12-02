@@ -12,6 +12,7 @@ html body {
     overflow: hidden;
     margin: 30px;
     position: sticky;
+    top: 0;
 }
 
 /* Navbar Default settings */
@@ -44,8 +45,27 @@ div>img {
 /* First slide text */
 .OpeningText {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: red;
+    font-size: 50px;
+}
+
+.Skills {
+    font-size: 25px;
+    background: rosybrown;
+    width: 100%;
+    margin: 30px
+    ;
+}
+
+td {
+    text-align: center;
+}
+
+th td tr {
+    border: 1px solid black;
+    border-spacing: 5px;
+    box-sizing: content-box;
 }
