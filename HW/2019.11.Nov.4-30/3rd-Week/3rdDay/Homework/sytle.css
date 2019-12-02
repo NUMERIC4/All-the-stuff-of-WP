@@ -35,12 +35,12 @@ a:hover {
 }
 
 /* Layout of image */
-.TheFrame {
-    margin: 30px;
+div.TheFrame {
+    width: 90%;
 }
-div>img {
+/* div>img {
     width: 100%;
-}
+} */
 
 /* First slide text */
 .OpeningText {
@@ -53,10 +53,11 @@ div>img {
 }
 
 .Skills {
+    box-sizing: border-box;
     font-size: 25px;
     background: rosybrown;
     width: 100%;
-    margin: 30px
+    /* margin: 30px */
     ;
 }
 
@@ -64,8 +65,10 @@ td {
     text-align: center;
 }
 
-th td tr {
+th td {
+    float: left;
     border: 1px solid black;
     border-spacing: 5px;
-    box-sizing: content-box;
+    background: rosybrown;
+
 }
