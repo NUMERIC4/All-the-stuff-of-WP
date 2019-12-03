@@ -23,17 +23,17 @@ a:hover     {background: turquoise;}
 .Skill-4t   {text-align: center; grid-row-start: fifthR;     grid-column-start: firstC;}
 
 /* HTML */
-.Skill-rank-1x1 {}
-.Skill-rank-1x2 {}
-.Skill-rank-1x3 {}
-.Skill-rank-1x4 {}
+.Skill-rank-1x1 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-1x2 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-1x3 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-1x4 {align-items: center;grid-column-start: ; grid-row-start: ;}
 /* CSS */
-.Skill-rank-2x1 {}
-.Skill-rank-2x2 {}
-.Skill-rank-2x3 {}
-.Skill-rank-2x4 {}
+.Skill-rank-2x1 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-2x2 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-2x3 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-2x4 {align-items: center;grid-column-start: ; grid-row-start: ;}
 /* GitHub */
-.Skill-rank-3x1 {}
-.Skill-rank-3x2 {}
-.Skill-rank-3x3 {}
-.Skill-rank-3x4 {}
+.Skill-rank-3x1 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-3x2 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-3x3 {align-items: center;grid-column-start: ; grid-row-start: ;}
+.Skill-rank-3x4 {align-items: center;grid-column-start: ; grid-row-start: ;}
