@@ -7,5 +7,33 @@ body        {display: inline-block; display: block;}
 a           {text-decoration: none; font-weight:bold; font-size: 20px; display: block; background: violet; width: 25%; text-align: center; border-radius: 25px;}
 a:hover     {background: turquoise;}
 .Img-Out    {margin: 0 30px 0 30px; background-image: url(https://i.pinimg.com/originals/00/f1/89/00f1894ee185b89d5f658083d01466f9.jpg); background-repeat:no-repeat;height: 100vh; background-position: center; background-size: 100%;}
-.Text-Out {margin: 0 30px; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-evenly; background: red; padding: 10px; text-align: justify;}
-.Skills-Out {display: grid;margin: 0 30px 0 30px;}
+.Text-Out   {margin: 0 30px; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-evenly; background: red; padding: 10px; text-align: justify;}
+.Skills-Grid{display: grid; grid-template-columns:[firstC] 25% [secondC] 25% [thirdC] 25% [fourthC] 25% [endC]; grid-template-rows: [firstR] 20vh [secondR] 20vh [thirdR] 20vh [fourthR] 20vh [fifthR] 20vh [endR];align-items: center;}
+.Skills-Out {height: 100vh; background: blue; margin: 0 30px 0 30px;}
+/* div>img {display: block;align-items: center;} */
+/* Positioning */
+/* I couldnt put the text middle of the grid. */
+.Skill-1i   {text-align: center; grid-row-start: firstR;     grid-column-start: secondC;}
+.Skill-2i   {text-align: center; grid-row-start: firstR;     grid-column-start: thirdC;}
+.Skill-3i   {text-align: center; grid-row-start: firstR;     grid-column-start: fourthC;}
+
+.Skill-1t   {text-align: center; grid-row-start: secondR;    grid-column-start: firstC;}
+.Skill-2t   {text-align: center; grid-row-start: thirdR;     grid-column-start: firstC;}
+.Skill-3t   {text-align: center; grid-row-start: fourthR;    grid-column-start: firstC;}
+.Skill-4t   {text-align: center; grid-row-start: fifthR;     grid-column-start: firstC;}
+
+/* HTML */
+.Skill-rank-1x1 {}
+.Skill-rank-1x2 {}
+.Skill-rank-1x3 {}
+.Skill-rank-1x4 {}
+/* CSS */
+.Skill-rank-2x1 {}
+.Skill-rank-2x2 {}
+.Skill-rank-2x3 {}
+.Skill-rank-2x4 {}
+/* GitHub */
+.Skill-rank-3x1 {}
+.Skill-rank-3x2 {}
+.Skill-rank-3x3 {}
+.Skill-rank-3x4 {}
