@@ -1,0 +1,13 @@
+header  {grid-area: header-area;background: rosybrown;}
+main    {grid-area: main-a;background: red;}
+aside   {grid-area: sidebar;background: royalblue;}
+footer  {grid-area: footer;background: slateblue;}
+.container {
+    display: grid;
+    grid-template-columns:50px 50px 50px 50px 50px ;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header-area header-area header-area header-area"
+    "main-a main-a .  sidebar"
+    "footer footer footer footer"
+}

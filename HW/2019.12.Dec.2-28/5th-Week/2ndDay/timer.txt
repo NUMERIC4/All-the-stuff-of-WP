@@ -1,0 +1,27 @@
+18.00 proje camp konusu konuşuldu 
+18.33 terminalden githuba yükleme
+        githubda yeni repo yapıldı şimdi pc ile onu bağlamak
+        ** Terminalde yazan kısmın en sonu ile dosya yolunda çalışmamızın bulunduğu dosya ismi aynı olmalı
+            vs code en altında ülem işareti bir panel açıyor orada termianlde var
+            diğer yol sürüme bağlı değişiyor ama index üzerine sağ tıkla ile de açılabilir
+        terminale "git init" yazıyorsun -> "Reinitialized existing Git repository in C:/Users/ahmet/OneDrive/Documents/GitHub/All-the-stuff-of-WP/.git/" cevabı alındı
+18:42   İndirilebilicek linkler gösteriliyor
+18:45   git add den bahsetti galiba dosyaları pc deki yere eşliyor
+18:48   Kopar ben konuyu incelemem lazım tekrarı izle
+18:54   giriş
+18:59   header main aside footer div bunları oluşturduk
+        Grid oluşturma amacındayız
+19:00   CSS içerisine grid yapısı kuruldu
+        CSS-trick de bir görüntüyü oluşturmaya çalışıyoruz
+        grid-template-column dierek sütun eklemeye başlıyoruz pixel ile yapıcaz
+        Repeat diye bir fonksiyon gösterildi geçen günkü derste şu anki amaç sadece 5 kolon göstermek olduğu için kullanabilirdik
+        *İşin püf noktası grid-template-areas
+        itemlerle css kısmını linklemek lazım isteiğinden başlayabilirssin ama bundan önce bir şeyler tanımlamak isteiğinden
+19:04       header  {grid-area: header-area}
+            main    {grid-area: main-a;}
+            aside   {grid-area: sidebar;}
+            footer  {grid-area: footer;} bunu ekledik
+19:10   bizim yapmamızı istedi kabaca çıktı olay container içinde grid template areas içerisini doldurduk falan filan
+19:16   . oranın boş bırakıldığını ifade eder eksik olmamalı satır elemanlarını tam tutturmak zorundayız yoksa görünüm çöküyor
+        
+
