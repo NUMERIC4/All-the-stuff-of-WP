@@ -23,5 +23,16 @@
             footer  {grid-area: footer;} bunu ekledik
 19:10   bizim yapmamızı istedi kabaca çıktı olay container içinde grid template areas içerisini doldurduk falan filan
 19:16   . oranın boş bırakıldığını ifade eder eksik olmamalı satır elemanlarını tam tutturmak zorundayız yoksa görünüm çöküyor
+19:18   mola verildi
+19:50   ders başladı
+19:58   ders resmi olarak konu ile başladı
+        iki format var bu işlem için açıkçası nasılı kolayına geliyorsa onu uygula
+20:00   grid column gap kısmını uygulucaz
+20:14   neden pixel olarak hücreleri atadık auto yerine
+        itemları justify ettiğinde yatayda allign ettiğinde dikeyde etkileniyor ama container masum
+        grid üzerinden yazarsan bu sefer container ı sağa sola esneticek yani onları sarsacak
+        gridler üzerinde oynama yapmak için
+        justify content işi ile sayfanın daha modern bir tasarıma erişmesi için bir yol oluyor
+        aliige place self ıncık cıncık css tricks sayfasından bakıver
         
 
