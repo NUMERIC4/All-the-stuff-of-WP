@@ -1,9 +1,10 @@
-*           {margin: 0px; padding: 0px; display: block; font-family:Arial, Helvetica, sans-serif;}
-html        {scroll-behavior: smooth;}
-body        {display: grid;}
+*           {margin: 0px; padding: 0px; font-family:Arial, Helvetica, sans-serif;}
+html        {scroll-behavior: smooth; height: 100%;}
+body        {display: grid; display: block; height: 100%;}
 .nav        {position: sticky; top: 0px;display: flex; align-content: center;}
+.Nav-outer  {position: sticky; top: 0px;}
 .Nav-Out    {margin: 30px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; background: chartreuse; height: 30px; align-items: center;}
 a           {text-decoration: none; font-weight:bold; font-size: 20px; display: block; background: violet; width: 25%; text-align: center; border-radius: 25px;}
 a:hover     {background: turquoise;}
-.img-out    {background: darkblue; padding: 50px;}
-/* .Text-out {margin: 30px; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-evenly; background: red; padding: 10px; text-align: justify;} */
+.img-out    {margin: 0 30px 0 30px; background-image: url(https://picsum.photos/150); background-repeat:no-repeat; height: 100%; background-position: center; border-image-slice: 30%; background-size: 100%;}
+.Text-out {margin: 0 30px; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-evenly; background: red; padding: 10px; text-align: justify;}
