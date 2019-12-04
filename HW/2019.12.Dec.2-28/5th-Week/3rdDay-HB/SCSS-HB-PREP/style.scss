@@ -1,0 +1,173 @@
+@import "reset";
+
+$mainYellow: #cc9901;
+$mainBlack: #000;
+$mainWhite: #fff;
+$linkHoverBG: #e7e5e0;
+$blackOpacity: rgba(0,0,0,0.6);
+$mainGrey: rgb(131,129,129);
+$lightGreen: #e0fcb3;
+
+@mixin buttons {
+    background:$mainYellow;
+    color:$mainWhite;
+    font-size:0.85rem;
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+@mixin buttons-hover {
+    background:$mainWhite;
+    color: $mainYellow;
+    border: 1px solid $mainYellow;
+}
+
+@mixin bordered($width: 1px, $color:blue) {
+    border-bottom: $width solid $color;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    background: $mainWhite;
+    z-index: 100;  //tabaka tabaka ayarlamayı sağlıyor. Dolayısıyla ne kadar sayı yüksekse en üstte o gözükücek
+    overflow: hidden;
+
+    .logo_text {
+        flex: 30%; //logoyu bo alanda ne kadar yer kaplayacağını belirliyoruz nested elements kullanımı burada gözükmekte
+        color: $mainYellow;
+        font-size: 2.5rem;
+        padding: 15px 50px;
+    }
+    .links {
+        flex: 70%;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            width: 100px;
+            color: $mainYellow;
+            padding: 25px;
+            font-size: 1.1rem;
+
+            //text-align: center;
+            //text-decoration: none;  //normalde böyle yazmak gerekiyor ama sass ın burada sağladığı bir kolaylığı uygulayacağız
+            
+            //aynı isimdeki değişkenleri nested olarak kullanabiliyoruz font gibi text gibi gibi
+            
+            text : {
+                align:center;
+                decoration: none;
+            }
+            transition: scale 0.5s linear;
+
+            &:hover { //ve işareti koyunca  parent olana a yı represent etmekte
+                background: $linkHoverBG;
+                transform: scale(1.3); //1.3 kat byümesi için o parametreyi koyduk
+            }
+            &:nth-child(4){
+                margin-right: 100px;
+            }
+        }
+    }
+
+    @media screen and (max-width:992px) { //media query nasıl kullanabiliriz ksımını gösteriyor buradaki parent ların içinde olursa onlar bu media dan etkilenecek
+        display: block;
+        width: 100%;
+
+        .logo_text{
+            width: 100%;
+            display: block;
+        }
+
+        .links {
+            width: 100%;
+            display: block;
+
+            a {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}
+
+//Banner
+.banner {
+    width: 100%;
+    height: 500px;
+    margin-top: 70px;
+    background : {
+        image: url(images/2.jpg);
+        size: cover;
+        position:center;
+    }
+}
+
+//Section one cards
+.sectionOne {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+    color: $blackOpacity;
+
+    h1 {
+        padding: 40px;
+        font-size: 2rem;
+    }
+
+    p {
+        line-height: 30px;
+    }
+
+    .out_box{
+        display: flex;
+        flex-wrap: nowrap; //küçülttükçe aşağı kaymalar olur diğer türlü ekrandan kaybolmalar olur
+        margin-top: 30px;
+        justify-content: center;
+
+        .inner_box {
+            flex: 25%;
+            padding: 20px;
+            text-align: left;
+
+            img {
+                &:hover {
+                    opacity: 0.7; //resmin üzerine gelince bir tık farkındalık oluşturuyoruz bu sayede
+                    cursor: pointer;
+                }
+            }
+            h2 {
+                color:$mainYellow;
+                padding: 15px 0;
+                font-size: 1.2rem;
+            }
+
+            p {
+                color: $blackOpacity;
+                font-size: 1.1rem;
+                padding: 10px 20px 10px 0;
+                line-height: 30px;
+                margin-bottom: 15px;
+                text-align: justify;
+            }
+
+            a{
+                @include buttons;
+                text : {
+                    transform: uppercase;
+                    align: center;
+                    decoration: none;
+                }
+
+                &:hover {
+                    @include buttons-hover;
+                }
+            }
+
+        }
+    }
+}
