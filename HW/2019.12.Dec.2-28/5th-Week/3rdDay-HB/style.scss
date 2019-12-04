@@ -1,0 +1,60 @@
+// $mycolor:blue;
+// $myBGC: green;
+// h1{color: $mycolor;background: $myBGC;}
+// p{color: $mycolor}
+
+
+//nested kullanımı
+// nav {
+//     ul  {
+//         margin: 0px;
+//         padding: 0px;
+//         list-style: none;
+//         li  {
+//             display: inline-block;
+//             a   {
+//                 display: block;
+//                 padding: 6px 12px;
+//                 text-decoration: none;
+//             }
+//         }
+//     }
+// }
+
+
+@import "reset";
+
+@mixin important-text {
+    color:red;
+    font-size: 25px;
+    font-weight: bold;
+    border:10px solid blue;
+}
+
+// @mixin bordered($Cust-width $Cust-color) {
+    // border:$Cust-width solid $Cust-color;
+// }
+
+.danger{
+    @include important-text;
+    @include bordered(20, yellow);
+    background: black;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text1 {
+    @extend .text;
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.text1 {
+    @extend .text;
+    color:blue;
+    font-family:'Times New Roman', Times, serif;
+}

@@ -1,0 +1,13 @@
+18.09   scss nasıl kurulur nasıl entegre edilir
+18:14   css dosyası ile aynı isimde olması şartı ile scss dosyası ekliyoruz
+        olayı şu biz yazıcaz o css kodlarını compile edicekmiş otomatik olarak 
+        scss de değişken atadık
+        bu durumda kendisi name.css.map adında bir klasör oluşturdu bu da aktarıcı sanırım
+        değişken tanımlayıp onları vermek istediğimiz özelliklere eşitledik yani bir hamlede birden fazla elemanı etkilemek istiyoruz class imi tnımı yapmadan dolayısıyla bir tık amtematik işlemine çeviriyoruz
+        süslü parantezin içinde değişken değiştirirsen sadece orayı etkiler
+        ** ama içeri !global dersek o zaman genel için değişir
+18:33   nested elemanlar
+        biraz daha kodlama rahatlığı html de iç içe yazarak ifade ettikten sonra o sana css çıktısını veriyor. Tamamen stil meselesi coder için
+18:37   başka bir dosyadan projeye import etme yöntemi
+        *** proje içindeki dosyanın başına _ koyarsan sadece lazım olduğunda compile ediliyor diğer türlü proje açılır açılmaz hepsi compile oluyor
+19:10   takip etmeye çalıştım ama live sass eklentisi bir yerde kapandı ve ondan sonra toparlayamadım yine kaldık ders tekrarına
