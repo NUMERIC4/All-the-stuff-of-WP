@@ -1,0 +1,75 @@
+
+// $mycolor : red;
+
+// h1 {
+//     $mycolor : green !global;
+//     color: $mycolor;
+// }
+
+// p {
+//     color: $mycolor;
+// }
+
+
+
+
+// nav {
+//     ul {
+//         margin: 0;
+//         padding: 0;
+//         list-style: none;
+
+//         li {
+//             display: inline-block;
+
+//             a {
+//                 display: block;
+//                 padding: 6px 12 px;
+//                 text-decoration: none;
+//             }
+//         }
+//     }
+// }
+
+@import "reset";
+
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@mixin bordered($genislik, $renk) {
+    border: $genislik solid $renk;
+}
+
+.danger {
+    @include important-text;
+    @include bordered(20px, yellow);
+    background: green;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.text1 {
+    @extend .text;
+    color: red;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+.text2 {
+    @extend .text;
+    text-align: right;
+    color: blue;;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
