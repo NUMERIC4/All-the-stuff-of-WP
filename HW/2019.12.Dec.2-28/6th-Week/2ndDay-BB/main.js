@@ -74,3 +74,35 @@ else {
 //TypeOf
 //console.log(typeof myAge); //data tipini bastırıyor console a 
 
+//arrays
+
+let myFirstArr = [];
+
+let myCars = ['Audi', '2', 2, 2, 2, "2"];
+
+console.log(myCars);
+
+let fruits = ['banana', 'ananas', 'kiwi'];
+
+console.log(myCars);
+console.log(fruits);
+
+console.log('En sevdiğiniz meyve ' + fruits[0]);
+
+let newFruit = 'Orange';
+
+fruits[2] = 'Cherry';
+fruits[1] = newFruit;
+fruits[3] = 'Chery';
+console.log(fruits);
+let fruitCount = fruits.length;
+console.log(fruitCount);
+
+//pop, push, shift, unshift <<>> array cacıklayıcılar
+
+let falssBool = false;
+let finalArr = ['Germany', 'US', 'GBI', 'Cherry', 'cHERRY', 'LaDY', newFruit, falssBool];
+//arrayname.push();
+//add new number to end of the array
+finalArr.push('oo ma bay');
+console.log(finalArr);
