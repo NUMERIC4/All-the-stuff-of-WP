@@ -1,4 +1,4 @@
-Boolean
+/*Boolean
 
 let myFirstBool = false; //burada true dendiği için boolean tipine geçiş yapıldı
 //let myFirstBool; //bu tanımda sınıfı any
@@ -40,6 +40,7 @@ if (myFirstBool = true) {
     alert('1');
     console.log('2');
 }
+
 myFirstBool = false;
 //boolean and if statemnet with not equal (!=)
 if (myFirstBool != true) {
@@ -51,4 +52,25 @@ myFirstBool = 15;
 if (myFirstBool != true) {
     alert('5');
     console.log('6');
+}*/
+
+
+/*
+let myAge = 998;
+
+if (myAge >= 998)
+{
+    console.log('You are an antique')
 }
+else if(myAge >20){
+
+    console.log('ehehehe daha olammışsın');
+}
+else {
+    console.log('ahahahahah');
+}
+*/
+
+//TypeOf
+//console.log(typeof myAge); //data tipini bastırıyor console a 
+
