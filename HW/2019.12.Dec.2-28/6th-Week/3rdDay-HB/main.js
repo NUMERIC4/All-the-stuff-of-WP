@@ -78,7 +78,7 @@ for (i=0;i <x.length;i++){
     console.log(x[i])
 }
 */
-/*
+
 var array = [];
 var num1 = window.prompt("Lütfen 1sayı gir");
 array.push(parseInt(num1));     //parseInt ile data type değiştiriyoruz diğer türlü string kabul ediliyor
@@ -93,7 +93,7 @@ else
 {console.log("sayılar eşit");}
 console.log(array);
 
-*/
+
 /*
 // 0 dan 15 e tek olan sayıları bastır
 var f = 0;
@@ -185,7 +185,7 @@ for ( var t = 1 ; t<101; t++){
 }
 */
 //arraye sokma
-
+/*
 var y = [];
 for ( var t = 1 ; t<101; t++){
     if ( t % 3 === 0 && t % 5 === 0){
@@ -205,4 +205,4 @@ for ( var t = 1 ; t<101; t++){
     }
 }
 
-console.log(y);
+console.log(y);*/

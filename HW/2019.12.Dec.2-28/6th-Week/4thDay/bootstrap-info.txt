@@ -1,0 +1,29 @@
+
+<!-- 
+1.) bootstrap giriş için Starter Template 
+2.) carousel ekledik
+3.) search butonu yoktu onu ekle
+4.) Resimler için bootstrap te bir detay var resimleri halletmek lazımdı
+
+
+genel rotasyonlar 
+1-- Compıonent ten nabar ekledik
+2-- VSC navbar başlangıcına comment
+3-- navbarın responsivlik kısmı ilk nav tag içine yapılması gerek
+4-- carousel sayfasından uygun olanı bulduk aldık
+5-- text allignment kısmına dikkat etmemiz gerek carousel de
+6-- sıra kartlara geldi
+7-- component -> card
+8-- container içerisine cardları eklicez
+9-- satır açıcaz 1 e 3 adet card giricek
+10-- ikinci satıra text ve resim yerleştiricez ve bu şekilde 4 e kadar gidicez
+11-- resimleri tekrardan dizayn etmemiz gerekiyordu rounded image diye bir class oı var bu şekildde ayarladık
+12-- text center dememizle cardlara genel şekillerini vermiş oluyoruz
+13-- align dikey de justify yatayda yerleştirme yapıyor. flec olmasan olmza ama
+14-- justify-content-between de flex de space-between in yaptğını yapıyor
+15-- en sona da turn buttonu nu olulturuyoruz
+16-- telefon modu için bazı şeylerden fedakarlık yapabiliriz her şey data yükleme süresi etkileniyor
+17-- ödev kriterleri
+18-- Web sayfası yapılıyorsa kullanıcı için uygun mu responsive mi? İşe yarar bilgiler aktarılıyor mu erişilebiliyor mu ?
+
+-->
