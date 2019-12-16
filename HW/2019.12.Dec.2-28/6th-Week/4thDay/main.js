@@ -14,7 +14,7 @@ for (TakenNumNS = TakenNum;TakenNumNS <0; TakenNumNS--)
 //     console.log(`${TakenNum}!is not possible`);
 // }
 // else {
-     console.log(`${TakenNum}! = ${Holder}`);
+    console.log(`${TakenNum}! = ${Holder}`);
 // }
 
 //eksik 1 tam sayı olmayanları elemedim negatif tam sayıları elemedim
@@ -114,8 +114,8 @@ console.log[newX];
 //çalıştıramadım
 */
 
-var x = [10, 1, 2, 2, 3, 6, 7, 3, 9, 3, 6, 1, 4, 2, 3, 10];
+// var x = [10, 1, 2, 2, 3, 6, 7, 3, 9, 3, 6, 1, 4, 2, 3, 10];
 
-    var newX = [];  
-newX = x.filter(item => item < 8)//.map(item => console.log(item));
-console.log(newX);
+//     var newX = [];  
+// newX = x.filter(item => item < 8)//.map(item => console.log(item));
+// console.log(newX);
