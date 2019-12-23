@@ -291,28 +291,32 @@ switch (expression) {
                                                 //the info that just give inside the lecture as an pill
                                                 // join()    tostring()     indexof()       reverse()
 
-
-                                                    //whlie do 
-                                                //  while(true){            If the statement is correct run the code block
+                                                    /*
+                                                    //whlie do              //If the statement is correct run the code block
+                                                //  while(true){
                                                         //kod blogu
                                                 //  }
 
-                                                    //do while
+                                                    //do while              //run for the 1st time then check the condition for running again
                                                 //  do {
                                                         //kod blogu
                                                 //  }
                                                 //  while (true);
 
-                                                var i = 1;
-                                                while (i<=10){
-                                                    var text = "Number" + i;
-                                                    console.log(text);      //it will print up to Number10
-                                                    i++
-                                                }
-                                                var j = 1;
-                                                do{
-                                                    var text = "Number" + j;
-                                                    console.log(text);
-                                                    j++
-                                                }
-                                                while(j<0);     //output Number1
+                                                    var i = 1;
+                                                    while (i<=10){              
+                                                        var text = "Number" + i;
+                                                        console.log(text);      //it will print up to Number10
+                                                        i++
+                                                    }
+                                                    var j = 1;
+                                                    do{
+                                                        var text = "Number" + j;
+                                                        console.log(text);
+                                                        j++
+                                                    }
+                                                    while(j<0);     //output Number1
+                                                    */
+
+
+                                                        //continue if this command exist that means go to loop beginning again dont go to following stuff
