@@ -291,3 +291,4 @@ switch (expression) {
                                                 //the info that just give inside the lecture as an pill
                                                 // join()    tostring()     indexof()       reverse()
 
+                                                    
