@@ -291,4 +291,28 @@ switch (expression) {
                                                 //the info that just give inside the lecture as an pill
                                                 // join()    tostring()     indexof()       reverse()
 
-                                                    
+
+                                                    //whlie do 
+                                                //  while(true){            If the statement is correct run the code block
+                                                        //kod blogu
+                                                //  }
+
+                                                    //do while
+                                                //  do {
+                                                        //kod blogu
+                                                //  }
+                                                //  while (true);
+
+                                                var i = 1;
+                                                while (i<=10){
+                                                    var text = "Number" + i;
+                                                    console.log(text);      //it will print up to Number10
+                                                    i++
+                                                }
+                                                var j = 1;
+                                                do{
+                                                    var text = "Number" + j;
+                                                    console.log(text);
+                                                    j++
+                                                }
+                                                while(j<0);     //output Number1
