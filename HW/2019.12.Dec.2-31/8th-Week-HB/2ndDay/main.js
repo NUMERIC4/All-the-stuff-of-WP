@@ -159,7 +159,7 @@
 
                             //forEach + Classic Function Way
                                 /*
-                                Numbers.forEach(function (value, index)        //this value deterine with numbers array item from the beginning up to end, index will be array index value. So we dont have to declare them by manually the function will do it by its own. !! Mre important doesnt important what yoy write inside the () but the important side you should use same thing inside the forEach function also valid for almost anykind function
+                                Numbers.forEach(function (value, index)        //this value determine with numbers array item from the beginning up to end, index will be array index value. So we dont have to declare them by manually the function will do it by its own. !! Mre important doesnt important what yoy write inside the () but the important side you should use same thing inside the forEach function also valid for almost anykind function
                                 {
                                     console.log(`${index + 1}th value ,which is inside the array : ${value}. `)
                                 }
@@ -373,6 +373,7 @@
 
                     //Some Methode
                     //Array.every(function) --> we aplly some test, it will check is there any element that it pass. True, False
+                    /*
                     var List = [                                            //Base Array
                         ['Television', 1000],
                         ['Book', 15],
@@ -394,3 +395,4 @@
 
                     console.log(SomeArrowFuncItem2);
                         //Output --> false
+                    */
