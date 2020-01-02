@@ -92,8 +92,8 @@ console.log(res2.to);
 
 let res3 = localStorage.getItem('email');
 
-let ObjEmail = JSON.parse(res3);
+let objEmail = JSON.parse(res3);
 
-console.log(ObjEmail);
+console.log(objEmail);
 
 sessionStorage.setItem('Time', Date.now());

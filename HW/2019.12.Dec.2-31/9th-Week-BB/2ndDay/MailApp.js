@@ -11,4 +11,11 @@ function sendEmail()
     mails.push(mail);
     localStorage.setItem('mail', JSON.stringify(mails[length.mails-1]));
     console.log(mails);
+    localStorage.setItem('MailsArray', JSON.stringify(mails));
+}
+
+function gettingMails() {
+    mails = JSON.parse(window.localStorage.getItem('MailsArray'));
+    console.log(mails);
+    return mails
 }
