@@ -95,3 +95,5 @@ let res3 = localStorage.getItem('email');
 let ObjEmail = JSON.parse(res3);
 
 console.log(ObjEmail);
+
+sessionStorage.setItem('Time', Date.now());
