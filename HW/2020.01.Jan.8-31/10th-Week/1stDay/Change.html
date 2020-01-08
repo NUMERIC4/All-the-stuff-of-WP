@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Toplantıya katılım durumunz</h1>
+    <form>
+        <label for="isim">İsim</label>
+        <input type="text" id="isim">
+        <br><br>
+        <label for="soyisim">Soyisim</label>
+        <input type="text" id="soyisim">
+        <br><br>
+        <label for="evet">Evet</label>
+        <input type="radio" id="evet" value="evet">
+        <!-- <br><br>
+        <label for="hayir">Hayır</label>
+        <input type="radio" class="radiobut" value="hayir"> -->
+    </form>
+    <br><br>
+    <button id="button">Gönder</button>
+
+    <ul>
+        <li> ISIM, SOYISIM, KATILIMDURUMU : </li>
+    </ul>
+    
+    <script>
+    
+    var sahis = 'Ahmet';
+    var sahisSoy = 'Karan';
+    var katilim ;
+
+    document.getElementById('isim').onchange = () => 
+    {
+        sahis = document.getElementById('isim').value;
+        console.log(sahis);
+    }
+
+    document.getElementById('soyisim').onchange = () => 
+    {
+        sahisSoy = document.getElementById('soyisim').value;
+        console.log(sahisSoy);
+    }
+
+    document.getElementById('evet').onchange = () => 
+    {
+        katilim = document.getElementById('evet').value;
+        console.log(katilim);
+    }
+
+    katilim = katilim ? 'evet' : 'hayir';
+
+    document.getElementById('button').onclick = () =>
+    {
+        document.getElementById('liste').innerHTML += `<li>${sahis}, ${sahisSoy}, ${katilim}`;
+        document.getElementById('isim').value = '';
+        document.getElementById('soyisim').value = '';
+        document.getElementById('evet').checked = false;
+    }
+
+    </script>
+</body>
+</html>

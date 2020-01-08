@@ -1,0 +1,32 @@
+<!-- Click yapıldığında background değişsin -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">Clicke here</button>
+    
+
+    <script>
+        document.getElementById('button').onclick = ( ) => 
+        {
+            const number = () => Math.floor(Math.random()*256);     //renk randomizasyonu
+            
+            const opacity=Math.random();
+
+
+            var renk = `rgb(${number()}, ${number()}, ${number()}, ${opacity})`;    //random değer ataması
+
+            console.log(renk);      //çalışıyor mu kontrolü
+
+            document.body.style.background = renk;      //her dokanmada değişiyor
+        }
+    
+    </script>
+</body>
+</html>
