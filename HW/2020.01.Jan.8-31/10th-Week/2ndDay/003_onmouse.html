@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <img id="image" src="p-bulboff.gif" alt="" width="100" height="100">
+
+        <script>
+        document.getElementById('image').onmousedown = (e) => 
+        {
+            e.target.src = 'p-bulbon.gif'       //e.target ile img ele geçirildi
+        }
+
+        document.getElementById('image').onmouseup = (e) =>
+        {
+            e.target.src = 'p-bulboff.gif'
+        }
+        </script>
+    </body>
+
+</html>

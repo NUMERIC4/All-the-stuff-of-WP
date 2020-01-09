@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<img id="image" src="p-smiley.gif" alt="smily" width="32" height="32">
+
+    <script>
+        document.getElementById('image').addEventListener('mouseover', (e) => //e = event gnel olarak kullanılıyor
+        {
+            console.log(e.target);
+            e.target.style.height = "45px";
+            e.target.style.width = "45px";
+        }
+        );
+
+        document.getElementById('image').addEventListener('mouseout', e => 
+        {
+            console.log(e.target);
+            e.target.style.height = "32px";
+            e.target.style.width = "32px";
+        }
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <img onmouseover="bigImg(this)" onmouseout="smallImg(this)" src="p-smiley.gif" alt="Smile :D" width="32" height="32">
+    <img onmouseover="bigImg(this)" onmouseout="smallImg(this)" src="p-bulbon.gif" alt="Smile :D" width="32" height="32">
+
+
+    <script>
+        function bigImg(x) 
+        {
+            console.log(x);
+            x.style.height = "45px";
+            x.style.width = "45px";
+        }
+
+        function bigBulb(y)
+        {
+            console.log(y);
+            y.style.height = "164px";
+            y.style.width = "164px";
+        }
+
+        function smallImg (x)
+        {
+            console.log(x);
+            x.style.height = "32px";
+            x.style.width = "32px";
+
+        }
+        </script>
+</body>
+
+</html>
+
+
+<!-- mouseover vs mouseout -->

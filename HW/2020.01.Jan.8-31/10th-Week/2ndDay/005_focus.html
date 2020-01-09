@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    
+    Isim : 
+    <input type="text" id="isim">
+    <br><br>
+    Sehir : 
+    <input type="text" id="box2" value="Hamburg">
+    <br><br>
+
+    <textarea id="box3" cols="30" rows="10"></textarea>
+
+    <script>
+//      document.body.onload = () => document.getElementById('isim').focus();
+
+        document.getElementById('isim').onfocus = e => e.target.style.background = 'red';
+
+        document.getElementById('box2').onfocus = e => e.target.value = '';
+
+        document.getElementById('box3').onfocus = e => e.target.style.color = 'blue';       //chrome un js compiler sebebiyle out tanımlasak bile bu değer değişmicek
+
+        document.getElementById('box3').onfocusout = e => e.target.style.color = 'red';     //olması gerek focus çıktığında kırmız olması lazım yazının !! Ama olmuyor
+
+
+    </script>
+</body>
+</html>

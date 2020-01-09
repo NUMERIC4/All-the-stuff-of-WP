@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    Isim :
+    <input type="text" id="isim">
+    <br><br>
+    Soyisim :
+    <input type="text" id="soyisim">
+    <br><br>
+
+    <p id="text"></p>
+
+    <script>
+        document.getElementById('isim').focus();        //bu durumda direk focus atıyor onload şartı olmadan
+
+        document.getElementById('isim').onkeypress = e => 
+        {
+            console.log(e);
+            if (e.key === 'Enter') 
+            {
+                document.getElementById('soyisim').focus();
+            }
+        }
+
+        document.getElementById('soyisim').onkeypress = e => 
+        {
+            if (e.key === 'Enter')
+            {
+                document.getElementById('text').innerHTML = 'Wepsitene geldin hahahaha'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- enter tuşunun gönder işlevi icra etmesi-->
