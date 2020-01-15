@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Finding HTML elements by TagName</h2>
+
+    <div>
+        <p>Lorem, ipsum dolor. - p1 </p>
+    </div>
+
+    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias reprehenderit porro hic.</p>
+    <p>Lorem.</p>
+
+
+    <script>
+        var x= document.getElementsByTagName('p');
+        console.log(x);
+        
+        x[0].innerHTML = 'Changed text - p1';
+        x[1].innerHTML = 'Changed bois - pw';
+        x[2].style.color = 'blue';
+        x[2].innerHTML = x[0];
+    </script>
+</body>
+</html>
+
+
+<!-- getElementByTagName ---     it will create an array which is including same tagged elements
+                            The elements is a child or parent, does not important
+                                We should use index value to reach desired tag element -->

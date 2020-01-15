@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        p
+        {
+            color: green;
+        }
+        .intro
+        {
+            color: red;
+        }
+        .demo
+        {
+            color: blue;
+        }
+        </style>
+    </head>
+    
+    <body>
+        <p>Hi World</p>
+
+        <p class="intro">The DoM side -1</p>
+        <p class="intro">The <b>DoM side</b>  -2</p>
+        <p class="demo"></p>
+        <p class="demo"></p>
+
+
+        <script>
+            var x = document.getElementsByClassName('intro');
+            console.log(x);
+
+            var y = document.getElementsByClassName('demo');
+
+            
+            for(let i = 0; i<x.length; i++)
+            {
+                y[i].innerHTML = x[i].innerHTML;
+            }
+            console.log(y);
+        </script>
+    </body>
+</html>
+
+
+<!-- it will create an array with same class named element, like 'getElementByTagName'
+
+Be carefull about index number, it should represent the desired tag index -->

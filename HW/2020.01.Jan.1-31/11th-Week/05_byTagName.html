@@ -1,0 +1,33 @@
+<!--BUNDA BİR SIKINTI VAR ÇALIŞMADI NEDEN BAK Bİ-->
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+
+    <body>
+    
+        <p>Bir üçgenin alan hesabı</p>
+        Taban Kenarı : <br>
+        <input type="number">
+        <br><br>
+        Yükseklik : <br>
+        <input type="number">
+        <br><br>
+        <input type="submit" value="Hesapla">
+
+        <p></p>
+
+        <script>
+        
+        document.getElementsByTagName('input')[2].addEventListener = ('click', () => {
+            var data = document.getElementsByTagName('input');
+
+            var area = ( data[0].value * data[1].value / 2).toFixed(2);
+
+            document.getElementsByTagName('p')[1].innerHTML = `The are of triangle : ${area}`;
+        }) 
+        
+        </script>
+    </body>
+</html>

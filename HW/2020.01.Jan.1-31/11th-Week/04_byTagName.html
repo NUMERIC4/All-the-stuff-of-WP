@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to intermediate) who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>
+        
+        <script>
+        var text= document.getElementsByTagName('strong');
+        console.log(text);
+        
+
+    // text[0] for an element
+        document.getElementsByTagName('p')[0].onmouseover = () => 
+        {
+            text[0].style.color = 'red';
+        }
+        
+        document.getElementsByTagName('p')[0].onmouseout = () => 
+        {
+            text[0].style.color = 'black';
+        }
+
+    //for every strong tag elements
+        document.getElementsByTagName('p')[0].onmouseover = () => 
+        {
+            for(var i = 0; i<text.length; i++)
+            {
+                text[i].style.color = 'yellow';
+            }
+        }
+        
+        document.getElementsByTagName('p')[0].onmouseout = () => 
+        {
+            for (var i = 0; i<text.length; i++)
+            {
+                text[i].style.color = 'black';
+            }
+        }
+        </script>
+    </body>
+</html>

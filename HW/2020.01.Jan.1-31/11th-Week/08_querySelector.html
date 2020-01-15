@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .intro
+            {
+                color: red;
+            }
+            .demo
+            {
+                color: blue;
+            }
+            .text
+            {
+                background-color: yellow;
+            }
+            </style>
+    </head>
+    
+    
+    
+    <body>
+    
+        <p>Hello world</p>
+
+        <p class="intro">Lorem, query Selector and add class. -1</p>
+        <p class="intro">Lorem, <b>query Selector and add class</b> . -2</p>
+
+        <p>Paragraph - id1</p>
+        <p>Paragraph - id2</p>
+
+
+        <script>
+            //attribute 1st way methode
+            var x = document.querySelectorAll('p');
+            console.log(x);
+            //Class attribute application difference
+            
+            //x[3].class = 'demo';                      //it is not working i donno why but we should declare class wth className stuff
+            x[3].className = 'demo';
+
+
+            //attribute 2nd way methode
+            //x[4].setAttribute('className', 'demo');     //it wont work in this case we should type class only
+            x[4].setAttribute('class', 'demo');
+
+
+            //Style attribute application differnces
+
+
+            //1st methode which is commonly used 
+            //  var y = document.querySelector('p b');
+            //  console.log(y);
+            //  y.style.color ='blue';
+            //  y.style.textDecoration = 'underline';
+
+            //2nd methode is not preferred and also wrong
+                //var y = document.querySelector('p b');
+                //y.setAttribute('style', 'color:blue');
+                //y.setAttribute('style', 'text-decoration : underline'); //setAttribute will delete every detail before typed so it is important for style case
+
+
+            // add new class to <p>
+            x[3].classList.add('text');             //adding the class
+            x[1].classList.add('text');
+            x[1].classList.remove('intro');         //deleting the class
+        </script>
+    </body>
+</html>

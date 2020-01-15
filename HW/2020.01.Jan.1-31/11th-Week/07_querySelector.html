@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            p
+            {
+                color: green;
+            }
+            .intro
+            {
+                color: red;
+            }
+            #demo
+            {
+                color: blue;
+            }
+            </style>
+    </head>
+    
+    
+    <body>
+        <p>Hello world</p>
+
+        <p class="intro">Lorem, ipsum. -1</p>
+        <p class="intro">Lorem, ipsum. -2</p>
+
+        <p id="demo">Paragraph - id1</p>
+        <p id="demo">Paragraph - id2</p>
+            
+
+        <script>
+                var x = document.querySelector('#demo');
+                x.style.color = 'black';
+                x.style.fontWeight = 'bold';                    //we are in js so we cant use font-weight style because it is not acceptable in js so we should use Camel Style. fontWeight
+
+                var y = document.querySelectorAll('.intro');
+                var i = 0;
+            //  y[0].style.backgroundColor = 'yellow';          //this is an array so we should be carefull and consider the index side
+            while ( i<y.length)                                 //we use loops to affect each element
+            {
+                y[i].style.backgroundColor = 'yellow';
+                i++;
+            }
+
+            //we are targeting the first p tag
+        //  var z = document.querySelectorAll('p');
+        //  console.log(z[0]);
+            
+            var z = document.querySelector('p');
+            z.style.fontFamily = 'Helvetica';
+            z.style.fontSize = '25px';
+
+            
+        </script>
+
+    </body>
+</html>
+
+
+
+<!-- querySelector || querySelectorAll, Both of them have same writing style for tag, class name and id's like in CSS (we have to type in pranathesis) -->
+
+<!-- querySelector : Work with the first element which is okey for the limitation -->
+<!-- querySelectorAll : Work with every element which are fit to limitation -->
