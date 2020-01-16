@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>Finding HTML Elements Using documents.forms</h2>
+
+        <form>
+            Title : <input type="text"> <br><br>
+            Href : <input type="text"> <br><br>
+
+        </form>
+
+        <br>
+        <button onclick="myFunc()">Send</button>
+
+        <ul>
+
+        </ul>
+
+        <script>
+            function myFunc()       //we want to take title and href values whiach are entered by user
+            {
+                var x = document.forms[0];              //The array logic is valid here to. It should be 0 for title
+                console.log(x);                         //check
+
+                document.getElementsByTagName('ul')[0].innerHTML += `<li><a> ${x[0].value} </a></li>`;      //it is also in array logic because of getElementsByTagName
+                document.querySelector('ul li a').href = x[1].value;
+                document.querySelector('ul li a').target = '_blank';
+            }
+        </script>
+    </body>
+    </html>

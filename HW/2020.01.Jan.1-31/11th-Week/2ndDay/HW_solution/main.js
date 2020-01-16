@@ -5,10 +5,10 @@ function race()
     var red = document.getElementById('img1');
     var blue = document.getElementById('img2');
 
-    var redPos = 0;     //red car position
-    var bluePos = 0;    //blue car position
+    var pos1 = 0;     //red car position
+    var pos2 = 0;    //blue car position
 
-    var stopFunction = setInterval(() => {goFunc}, 1000);  //2 paremeters 1st one function 2nd one time (milisecond) -- setInterval(function, time) 
+    var stopFunction = setInterval(goFunc, 5);  //2 paremeters 1st one function 2nd one time (milisecond) -- setInterval(function, time) 
 
     function goFunc() 
     {
@@ -23,15 +23,10 @@ function race()
             clearInterval(stopFunction);
             document.querySelector('p').innerHTML = 'Red won';
         }
-        else    if( pos2 >= 1270 )
+        else if( pos2 >= 1270 )
         {
             clearInterval(stopFunction);
             document.querySelector('p').innerHTML = 'Blue won';
-        }
-        else
-        {
-            clearInterval(stopFunction);
-            document.querySelector('p').innerHTML = 'Draw';
         }
     }
 }
