@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table
+            {
+                border-collapse: collapse;
+                width: 50%;
+                margin: 0 auto;
+                font-family: Helvetica;
+            }
+
+            table thead tr
+            {
+                background: #262626;
+                color: white;
+            }
+
+            table tbody tr:nth-child(even)  /*Çift satırların arka planını ayarlamak için*/
+            {
+                background: #cdcaca;
+            }
+
+            td, th
+            {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 10px;
+                min-width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Finding HTML Elements Using documents.forms</h2>
+
+        <form>
+            İsim : <input type="text"> <br><br>
+            Soyisim : <input type="text"> <br><br>
+            Departman : <input type="text"><br><br>
+
+        </form>
+
+        <br>
+        <button>Ekle</button>
+
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>İsim</th>
+                    <th>Soyisim</th>
+                    <th>Departman</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        
+        <script>    //ternary function olarak yazıcaz görümesi rahat olsun diye satır satır yazıp command ekliyeceğiz
+            document.querySelectorAll('table tr td').length !== 0 ?       //eğer arrayin içi boşsa yı kastdiyor bu kısım !==
+                document.getElementsByTagName('table')[0].style.display = 'block'       //true kısmında çalışcak tek satırlık durum
+            :
+                document.getElementsByTagName('table')[0].style.display = 'none'        //false kısmında çalışıcak
+
+            //to get the input's data
+            var data = document.forms[0];
+
+            //onclick event 
+            document.querySelector('button').addEventListener('click', () => 
+                                                                {
+                                                                    var tableRow = [];
+
+                                                                    for (var i = 0; i < data.length; i++) {
+                                                                        tableRow.push(data[i].value)
+                                                                    }
+                                                                console.log(tableRow);
+
+                                                                //to add the data to the table as a new row
+                                                                var tabelBody = document.querySelectorAll('table tbody')[0];
+                                                                console.log(tabelBody);
+
+                                                                tabelBody.innerHTML += `
+                                                                                            <tr>
+                                                                                                <td>${tableRow[0]}</td>
+                                                                                                <td>${tableRow[1]}</td>
+                                                                                                <td>${tableRow[2]}</td>
+                                                                                            </tr>
+                                                                                        `;
+                                                                document.querySelector('table').style.display = 'block';
+
+                                                                //to delete the content of inputs
+                                                                for (let i = 0; i < data.length; i++) 
+                                                                    {
+                                                                        data[i].value = '';
+                                                                    }
+                                                                }
+                                                            );
+        </script>
+    </body>
+    </html>

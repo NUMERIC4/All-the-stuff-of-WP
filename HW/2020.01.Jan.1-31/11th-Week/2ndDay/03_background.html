@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS DOM</title>
+    <style>
+        body {
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: rgb(92, 161, 229);
+        }
+
+        .box.one {
+            top: 200px;
+            left: 400px;
+        }
+
+        .box.two {
+            top: 400px;
+            left: 200px;
+        }
+
+        .box.three {
+            top: 400px;
+            left: 600px;
+        }
+
+        .box.four {
+            top: 600px;
+            left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+    </div>
+
+    <script>
+        document.body.addEventListener('load', set_Change());
+
+        function set_Change() {
+            setInterval(changeFunc, 1); //clear interval a ihtiyacımız olmadığı için bunu tercih ediyoruz
+        }
+
+        function changeFunc() {
+            var divBox = document.getElementsByClassName('box'); //artık bu bir array çünkü 4 boc da geldi ve Elements olarak tanımlı çağıran yani 1 den fazla
+            let producedNumber = () => Math.floor(Math.random() * 256)  //tek satır olduğu için süslü paranteze ihtiyaç yok ve dolayısıyla üretilen sayıya return yapıcak default olarak
+            for (let i = 0; i < divBox.length; i++) {
+                var num1, num2, num3;
+                num1 = producedNumber();
+                num2 = producedNumber();
+                num3 = producedNumber();
+
+                divBox[i].style.background = `rgb(${num1}, ${num2}, ${num3})`;
+            }
+        }
+    </script>
+</body>
+
+</html>
