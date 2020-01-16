@@ -1,0 +1,28 @@
+.content
+{
+    width: 1600px;
+    height: 100px;
+    background: lightblue;
+    position: relative;
+}
+
+#img1
+{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+#img2
+{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+
+p
+{
+    position: absolute;
+
+    
+}
