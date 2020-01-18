@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Click the button to create a &ltp&gt element with some text<p>   <!--&lt : less then, &gt : greater then, bu şekilde hallediyoruz sanırım-->
+        <button onclick="myFunc()">...</button>
+
+        <script>
+            document.querySelector('button').onclick = () => {
+            //step1
+                var imgElem = document.createElement('img');
+            //step3
+                imgElem.src = 'p-smiley.gif';
+            //step4
+                imgElem.setAttribute('width', '50px');
+                imgElem.setAttribute('height', '50px');
+                imgElem.style.display = 'block';
+                imgElem.style.margin = '100px';
+            //step5
+                document.body.appendChild(imgElem);
+            }
+        </script>
+    </body>
+</html>

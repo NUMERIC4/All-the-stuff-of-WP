@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Click the button to create a &ltp&gt element with some text<p>   <!--&lt : less then, &gt : greater then, bu şekilde hallediyoruz sanırım-->
+        <button onclick="myFunc()">...</button>
+
+        <script>
+            function myFunc() {
+                var pElem = document.createElement('p');
+                pElem.innerHTML = 'This is a new created paragraph element';
+                document.body.appendChild(pElem);
+            }
+        </script>
+    </body>
+</html>

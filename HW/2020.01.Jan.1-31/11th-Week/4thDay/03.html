@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Click the button to replace the first item in the list<p>   <!--&lt : less then, &gt : greater then, bu şekilde hallediyoruz sanırım-->
+        <button>...</button>
+
+        <ul>
+            <li>Coffe</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <script>
+        //step1
+            document.querySelector('button').addEventListener('click', () => {
+                var newLi = document.createElement('li');
+                newLi.innerHTML = 'Water';  //it will add
+
+                var parentItem = document.querySelector('ul'); //target element, parent element
+                var oldElem = document.querySelectorAll('ul li'); //element will be deleted
+
+                parentItem.replaceChild(newLi, oldElem[0]);
+            })
+        </script>
+    </body>
+</html>

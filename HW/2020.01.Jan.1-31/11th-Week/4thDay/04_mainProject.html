@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+
+    <script>
+        //to add some style properties to body
+        document.body.style.padding = '30px 50px';
+        document.body.style.fontFamily = 'Arial';
+        document.title = 'ToDo List APP';
+
+        //to create and append the <h3> ------------------------------
+        document.body.onload = () => {
+        //creating <h3> element
+            var h3Elem = document.createElement('h3');
+
+            h3Elem.innerHTML = "Let's make ToDo List";
+
+
+            document.body.appendChild(h3Elem);  //adding <h3> element to body(parent)
+
+        //creating <button> element
+            var buttonElem = document.createElement('button');
+
+            buttonElem.innerHTML = 'Start';
+
+            buttonElem.setAttribute('onclick', 'showDiv1()');    //onclick : to show and add some elements to <div> element-1
+            buttonElem.style.padding = '15px 20px';
+            buttonElem.style.marginBottom = '20px';
+        //connect to parent
+            document.body.appendChild(buttonElem);
+
+        //creating <div> element
+            var divElem = document.createElement('div');
+
+            divElem.id = 'div1';
+            divElem.style.width = '300px';
+            divElem.style.height = '200px';
+            divElem.style.background = '#aaa';  //f5f5f5
+            divElem.style.display = 'flex';
+            divElem.style.flexDirection = 'column';
+            divElem.style.alignItems = 'center';
+            divElem.style.justifyContent = 'center';
+            divElem.style.transform = 'translateY(-500px)'; //divi ekran dışına ittik
+            divElem.style.transition = 'all 1s linear';
+
+            document.body.appendChild(divElem);
+
+        }
+
+        function showDiv1() {
+        //to translate <div> element-1 to normal position via animation
+            document.getElementsByTagName('div1')[0].style.transform = 'translateY(0)';
+
+        //creating <input> element
+            var inputElem = document.createElement('input');
+
+
+            inputElem.id = 'input1';
+            inputElem.type = 'text';
+            inputElem.setAttribute('onchange', 'getValue()'); //to get value of <input> with onchange event
+            inputElem.placeholder = 'Add item';
+            inputElem.style.width = '250px';
+            inputElem.style.padding ='8px';
+            inputElem.style.marginBottom = '20px';
+            inputElem.style.fontSize = '13px';
+            inputElem.style.display = 'block';
+
+            document.getElementById('div1').appendChild(inputElem);
+
+        //creating <button> element
+            var buttonElem_Div = document.createElement('button');
+
+            buttonElem_Div.innerHTML = 'Add item';
+
+            buttonElem_Div.setAttribute('onclick', 'addItemFunc()');    //to add ToDo items to <ul> li
+            buttonElem_Div.style.padding = '15px 20px';
+            buttonElem_Div.style.margin = '15px 20px';
+
+            document.getElementById('div1').appendChild(buttonElem_Div);
+
+            //----------------------------------------------second <div> block ----------------------------------------------
+
+            //creating <div> element-2
+            var divElem2 = document.createElement('div');
+
+            divElem2.id = 'div2';
+            divElem2.style.width = '300px';
+            divElem2.style.height = 'auto';
+            divElem2.style.background = 'lighblue';
+            divElem2.style.marginTop = '20px';
+            divElem2.style.transform = 'translateX(-500)';
+            divElem2.style.transition = 'all 1s linear';
+
+            document.body.appendChild(divElem2);
+
+            //creaitng <ul> element
+                var ulElem = document.createElement('ul');
+
+                ulElem.id  = 'ul1';
+                ulElem.style.padding = '20px';
+
+                
+}
+    </script>
+</body>
+</html>
