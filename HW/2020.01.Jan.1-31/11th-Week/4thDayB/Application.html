@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <!--There is nothing at the begining in body-->
+
+<script>
+    //to add some style properties to body
+        document.body.style.padding = '30px 50px';
+        document.body.style.fontFamily = 'Arial';
+        document.title = 'ToDo List App';
+
+        document.body.onload = () => {
+            //creating <h3> element
+                //step1 -create-
+                var h3Elem = document.createElement('h3');
+
+                //step2 -innerHTML-
+                h3Elem.innerHTML = "Let's make a ToDos";
+                
+                //step5 -Create parent child relation-
+                document.body.appendChild(h3Elem);
+
+            //creating <button> element
+                //step1 -create-
+                var buttonElem = document.createElement('button');
+
+                //step2 -innerHTML-
+                buttonElem.innerHTML = 'Start';
+                
+                //step3 -Adding attribute-
+                buttonElem.setAttribute('onclick', 'showDiv1()'); //we use showDiv1 func here to trigger
+
+                //step4 -style-
+                buttonElem.style.padding = '15px 20px';
+                buttonElem.style.marginBottom = '20px';
+
+                //step5 -create parent child relation-
+                document.body.appendChild(buttonElem);
+
+            //creating <div> element
+                //step1 -create-
+                var divElem = document.createElement('div');
+
+                //step2 -instead of innerHTML we need an ID for later using of this element to add another childss
+                divElem.id = 'div1';
+                
+                //step4 -style-
+                divElem.style.width = '300px';
+                divElem.style.height = '200px';
+                divElem.style.background = '#f5f5';
+                divElem.style.display = 'flex';
+                divElem.style.flexDirection = 'column';
+                divElem.style.alignItems  = 'center';
+                divElem.style.justifyContent = 'center';
+                divElem.style.transform = 'translateY(-500px)';
+                divElem.style.transition = 'all 1s linear';
+                
+                //step5 -create parent child relation
+                document.body.appendChild(divElem);
+        }
+//------------------------ end of onload ---------------------------------------
+
+        function showDiv1() 
+        {   //queryselector, getelementbyid, getelementsbytagname, queryselectorall all4can   be used to reach div
+            //to translate <div> element-1 to normal position via animation
+            document.getElementsByTagName('div')[0].style.transform = 'translateY(0)';
+
+            //creating <input> element
+                //step1 -create-
+                var inputElem = document.createElement('input');
+
+                //step2 -instead of innerHTML we add id and type to reach this element later on
+                inputElem.id = 'input1';
+                
+                //step3 -add attribute-
+                inputElem.type = 'text';
+                inputElem.setAttribute('onchange', 'getValue(this)');   //to get value of <input> with onchange event
+                inputElem.placeholder = 'Add item';
+
+                //step4 -style-
+                inputElem.style.width = '250px';
+                inputElem.style.padding = '8px';
+                inputElem.style.pargin = '20px';
+                inputElem.style.fontSize = '13px';
+                inputElem.style.display = 'block';
+
+                //step5 -create parent child relation-
+                document.getElementById('div1').appendChild(inputElem);
+
+            //creating <button> element
+                //step1 -create-
+                var buttonElem_Div = document.createElement('button');
+
+                //step2 -innerHTML-
+                buttonElem_Div.innerHTML = 'Add Item';
+
+                //step3 -add attribute-
+                buttonElem_Div.setAttribute('onclick', 'addItemFunc()'); //to add ToDo items to <ul> list
+                
+                //step4 -style-
+                buttonElem_Div.style.padding = '15px 20px';
+                buttonElem_Div.style.margin = '20px';
+
+                //step5 -create parent child relation-
+                document.getElementById('div1').appendChild(buttonElem_Div);
+
+        //----------------------------------------------------- second <div> block ---------------------------------------------
+            //creating <div> element-2
+                //step1 -create-
+                var divElem2 = document.createElement('div');
+
+                //step2 -ading id instead of innerhtml
+                divElem2.id = 'div2';
+                divElem2.innerHTML = 'dsadsa';
+
+                //step4 -style-
+                divElem2.style.width = '300px';
+                divElem2.style.height = 'auto';
+                divElem2.style.background = 'blue';
+                divElem2.style.marginTop = '20px';
+                divElem2.style.transform = 'translateX(-500px)';    //to hide the element outside of the page
+                divElem2.style.transition = 'all 1s linear';
+
+                //step5 -create parnet child relaition-
+                document.body.appendChild(divElem2);
+
+            //creating <ul> element
+                //step1 -create-
+                var ulElem = document.createElement('ul');
+
+                //step2 -id-
+
+                //step3 -attribute-
+                //step4 -style-
+                ulElem.style.padding = '20px';
+
+                //step5 -create parent child relation-
+                document.getElementById('div2').appendChild(ulElem);
+        }
+//------------------------ end of onclick-1 ---------------------------------------
+
+        //this variable should be global variable
+        var inputValue;
+        function getValue(holyMoly) {
+            inputValue = holyMoly.value;                                 //finding element via this method
+            // inputValue = document.getElementById('input1').value;        //finding element via ID
+            // inputValue = document.querySelector('div input').value;      //finding element via queryselector
+            // inputValue = document.getElementsByTagName('input')[0].value;//finding element via tag name
+            console.log(inputValue);
+        }
+//------------------------ end of onchange ---------------------------------------
+
+        function addItemFunc() 
+        {   //to translate <div> element-2 to normal position via animation
+            document.getElementsByTagName('div')[1].style.transform = 'translateX(0)';
+
+            //creating <li> element
+                //step1 -create-
+                var liElem = document.createElement('li');
+
+                //step2 -innerHTML-
+                liElem.innerHTML = inputValue;
+
+                //step4 -style-
+                liElem.style.margin = '10px';
+
+                //step5 -create child parent relation-
+                document.getElementById('ul1').appendChild(liElem);
+        }
+
+        </script>
+</body>
+</html>
