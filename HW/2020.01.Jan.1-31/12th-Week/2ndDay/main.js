@@ -55,6 +55,7 @@ function signUp() {
     else
     {
         alert('Successful sign up');
+        document.location.reload(true);
     }
 }
 
