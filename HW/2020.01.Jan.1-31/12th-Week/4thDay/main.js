@@ -1,104 +1,37 @@
-let emails = JSON.parse(localStorage.getItem('emails'));
+let resultArr = [];
 
-if (!emails) {
-    emails = [];
+let function1 = () => {
+    // setTimeout(() => {
+        resultArr.push('world');
+    // },3000);
 }
 
+setTimeout(function1,3000);
 
-function sendEmail() {
-    let from = document.getElementById('account').value;
-    let to = document.getElementById('to').value;
-    let cc = $('#cc').val();
-    let subject = $('#subject').val();
-    let message = $('#text').val();
-    let email = {to, cc, subject, message};
-    
-    emails.push(email);
-    console.log(emails);
-    localStorage.setItem('emails', JSON.stringify(emails));
-
-}
-/* 
-function showInbox() {
-    document.getElementById('inboxLink').classList.add('active');
-    document.getElementById('composeLink').classList.remove('active');
-    inbox.hidden = false;
-    compose.hidden = true;
-}
-function showCompose() {
-    inboxLink.classList.remove('active');
-    composeLink.classList.add('active');
-    inbox.hidden = true;
-    compose.hidden = false;
-} */
-
-function switchScreen(reqScreen) {
-    if (reqScreen == 'inbox') {
-        inboxLink.classList.add('active');
-        composeLink.classList.remove('active');
-    
-        inbox.hidden = false;
-        compose.hidden = true;
-        //reqScreen = 'compose';
-        getEmails();
-    }else if(reqScreen == 'compose'){
-        document.getElementById('inboxLink').classList.remove('active');
-        document.getElementById('composeLink').classList.add('active');
-    
-        inbox.hidden = true;
-        compose.hidden = false;
-        //reqScreen = 'inbox';
-    }else{
-        alert("There's a problem. Please contact with support service");
-    }
+let function2 = () => {
+    // setTimeout(() => {
+    resultArr.push('hello');
+    // },2000);
 }
 
-let showEmails = (index) => {
-    // console.log(index);
-    document.getElementById('toInfo').innerHTML = 'TO : '+ '<br>' + emails[index].to;
-    document.getElementById('ccInfo').innerHTML = 'CC : '+ '<br>' + emails[index].cc;
-    document.getElementById('messageInfo').innerHTML = 'MESSAGE : ' + '<br>' + emails[index].message;
+setTimeout(function2,2000);
 
 
+let function3 = () => {
+    // setTimeout(() => {
+    resultArr.push(' :) ');
+    // },5000);
 }
 
-function getEmails() {
-    //<button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
-    mailList.innerHTML = "";
-    //$('#mailList').html("");
+setTimeout(function3,5000);
 
-    let mailBox = JSON.parse(localStorage.getItem('emails'));
 
-    if (mailBox) {
-        mailBox.map((val,i)=>{  //map has 3 variables one value two indis three array. We need the indis one so define as i and use it
-            if (val.to == document.getElementById('account').value){
-                $('#mailList').append(`<button type="button" onclick="showEmails(${i})" class="list-group-item list-group-item-action">${val.subject}</button>`);
-            }
-        });
-    }
-}
+// function1();
+// function2();
+// function3();
 
-getEmails();
+console.log(resultArr);
 
-/*  
-let mailArr = [
-    {
-        to: "bulent.kayici@bbb.com", 
-        cc: "dddd", 
-        subject: "wtreet", 
-        message: "dsfsdfddd"
-    },
-    {
-        to: "bulent.kayici@bbb.com", 
-        cc: "dddd", 
-        subject: "wtreet", 
-        message: "dsfsdfddd"
-    },
-    {
-        to: "bulent.kayici@bbb.com", 
-        cc: "dddd", 
-        subject: "wtreet", 
-        message: "dsfsdfddd"
-    }
-]
-*/
+setTimeout(()=>{
+    console.log(resultArr);
+},6000);
