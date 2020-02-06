@@ -80,7 +80,7 @@ $(document).ready ( function ()
 
 
     //calculation part - şimdi girilen değerin sonucunu göstermek istiyoruz dolayısıyla keyUp ı kullanarak grilen değeri hesaplıyacak 19.49
-    $('#input1').keyup(() => 
+    $('#input1').keyup(function ()  
     {
         let input1Value = $(this).val();
         let currencyValue = parseFloat($('#currencyEqual').text());
