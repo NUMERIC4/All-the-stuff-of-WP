@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="04_ancestors.js"></script>
+    <style>
+        body 
+        {
+            padding: 20px;
+        }
+
+        button, input 
+        {
+            margin: 20px 10px;
+            padding: 10px;
+        }
+
+        .ancestors {
+            display: block;
+            border: 2px solid lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <title>JQuery TRAVERSING ancestors</title>
+</head>
+
+<body>
+    <!-- Direct parent -->
+    <button id="btn1">parent</button>
+
+    <!-- parents -->
+    <button id="btn2">Parents</button>
+
+    <!-- parnetsUntill -->
+    <button id="btn3">ParentsUntill</button>
+
+    <!-- parnetsUntill -->
+    <button id="btn4">Children</button>
+
+    <!-- parnetsUntill -->
+    <button id="btn5">Find</button>
+
+    <div class="ancestors">
+
+        <div class="one" style="width:500px; border:1px dotted black">div (great-grandparent)
+            <ul>ul (grandparent)
+                <li>li (direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+        ​
+        <div class="one" style="width:500px; border:1px dotted black">div (grandparent)
+            <p>p (direct parent)
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+    <p>text paragraph</p>
+
+</body>
+
+</html>

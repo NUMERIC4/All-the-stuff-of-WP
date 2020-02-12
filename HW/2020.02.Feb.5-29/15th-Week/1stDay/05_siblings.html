@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="05_siblings.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        button,
+        input {
+            margin: 20px 10px;
+            padding: 10px;
+        }
+
+        div {
+            position: absolute;
+            left: 40px;
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            margin: 20px 0;
+            background: lightgreen;
+            transition: 2s;
+        }
+    </style>
+    <title>JQuery TRAVERSING ancestors</title>
+</head>
+
+<body>
+    <!-- direct parent -->
+    <button id="btn1">next</button>
+
+    <!-- parents -->
+    <button id="btn2">nextAll</button>
+
+    <!-- parents until -->
+    <button id="btn3">nextUntil</button>
+
+    <!-- children -->
+    <button id="btn4">prev</button>
+
+    <!-- find -->
+    <button id="btn5">prevAll</button>
+
+    <!-- siblings -->
+    <button id="btn6">prevUntil</button>
+
+
+
+    <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+
+</body>
+
+</html>

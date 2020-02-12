@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="03_css.js"></script>
+    <style>
+        body
+        {
+            padding: 20px;
+        }
+        button, input
+        {
+            margin: 0 10px;
+            padding: 10px;
+        }
+        div
+        {
+            position: absolute;
+            left: 40px;
+            width: 250px;
+            height: 250px;
+            border: 1px solid blue;
+            margin: 20px 0;
+            background: lightgreen;
+            transition: 2s;
+        }
+        .active
+        {
+            left: -300px;
+        }
+        .changeBG
+        {
+            background: red;
+        }
+        .borderChange
+        {
+            border: 5px dashed blue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+    <body>
+        
+        <!-- addClass() -->
+        <button id="btn1">Add class</button>
+        <!-- removeClass() -->
+        <button id="btn2">Remove class</button>
+        <!-- toggleClass() -->
+        <button id="btn3">Toggle class</button>
+
+        <div>
+            <ol>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+            </ol>
+        </div>
+    </body>
+</html>
