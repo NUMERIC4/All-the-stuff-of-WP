@@ -132,4 +132,4 @@ alert(Rabbit.planet); // Earth
 
 console.log(new Animal( 'x', 8).maxSpeed());    //13
 console.log(new Animal( 'x', 5).maxSpeed());    //10
-console.log(Animal.maxSpeedSta());                 //NaN => 
+console.log(Animal.maxSpeedSta());              //NaN => 
