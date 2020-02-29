@@ -52,22 +52,31 @@ PersonalCardOnClickHandeler = (component, componentSecond)=>{
 export default App;*/
 
 import React, {Component} from 'react'
+import ResultCard from './ResultCard'
 
 export default class App extends Component {
 
   state = {
     results:[
-      {grade:50, lecture:'Math', score:100},
-      {grade:500, lecture:'Math2', score:10},
-      {grade:52, lecture:'Matah', score:20},
-      {grade:57, lecture:'Mawth', score:600}
+      {grade:"50", lecture:'Math', score:"100"},
+      {grade:"500", lecture:'Math2', score:"10"},
+      {grade:"52", lecture:'Matah', score:"20"},
+      {grade:"57", lecture:'Mawth', score:"600"}
     ]
   }
 
   render(){
+
+    let moutsideOfReturn =this.state.results.map((item,i)=> 
+      <ResultCard 
+      key={i}
+      grade={item.name} 
+      lecture={item.lecture} 
+      score={item.score}/>)
+
     return (
       <div>
-        
+      {moutsideOfReturn}
       </div>
     )
   }
